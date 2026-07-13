@@ -7,21 +7,28 @@
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-.banner{
+.banner{ 
     width:100%;
     border-radius:22px;
     margin-bottom:35px;
-    transition:0.35s ease;
-    box-shadow:0 0 20px rgba(0,120,255,.18);
+    transition:transform .35s ease, box-shadow .35s ease;
+    box-shadow:0 0 18px rgba(0,120,255,.18);
+    cursor:pointer;
 }
 
 .banner:hover{
-    transform:translateY(-8px) scale(1.02);
+    transform:scale(1.03) translateY(-8px);
     box-shadow:0 0 35px rgba(0,120,255,.55);
+}
+
+.banner:hover{
+ <a href="https://salla.sa/movestore/steam-online/c25323818" target="_blank">
+    <img src="online.png" class="banner" alt="Steam Online">
+</a>
+
+<a href="https://salla.sa/movestore/steam-offline/c758486836" target="_blank">
+    <img src="offline.png" class="banner" alt="Steam Offline">
+</a>
 }
 
 .section-title{
