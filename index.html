@@ -16,7 +16,8 @@
 
 body{
     background:#0b1220;
-    background-image:radial-gradient(circle at top,#143b7d33 0%,transparent 40%);
+    background-image:
+    radial-gradient(circle at top,#143b7d33 0%,transparent 40%);
     color:#fff;
     display:flex;
     justify-content:center;
@@ -32,26 +33,29 @@ body{
 /* اللوقو */
 
 .logo{
-    margin-bottom:15px;
-    font-size:62px;
-    font-weight:900;
-    line-height:1;
-    letter-spacing:2px;
+    margin-bottom:20px;
 }
 
-.logo .en{
-    color:#ffffff;
+.logo img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+    margin:auto;
+
+    box-shadow:
+        0 0 15px rgba(45,140,255,.35),
+        0 0 35px rgba(45,140,255,.20);
+
+    transition:.35s;
 }
 
-.logo .line{
-    color:#2d8cff;
-    margin:0 10px;
-}
-
-.logo .ar{
-    color:#2d8cff;
-    font-size:68px;
-    font-weight:900;
+.logo img:hover{
+    transform:scale(1.08);
+    box-shadow:
+        0 0 25px rgba(45,140,255,.60),
+        0 0 50px rgba(45,140,255,.35);
 }
 
 /* الوصف */
@@ -105,16 +109,9 @@ body{
     padding:40px 15px;
 }
 
-.logo{
-    font-size:42px;
-}
-
-.logo .ar{
-    font-size:30px;
-}
-
-.logo .line{
-    margin:0 6px;
+.logo img{
+    width:90px;
+    height:90px;
 }
 
 .desc{
@@ -140,10 +137,8 @@ body{
 
 <div class="container">
 
-<div class="logo" dir="rtl">
-    <span class="ar">موف</span>
-    <span class="line">|</span>
-    <span class="en">MOVE</span>
+<div class="logo">
+    <img src="logo.png" alt="MOVE Logo">
 </div>
 
 <div class="desc">
@@ -151,11 +146,11 @@ body{
 </div>
 
 <a class="banner" href="https://salla.sa/movestore/steam-online/c25323818" target="_blank">
-<img src="online.png" alt="Steam Online">
+    <img src="online.png" alt="Steam Online">
 </a>
 
 <a class="banner" href="https://salla.sa/movestore/steam-offline/c758486836" target="_blank">
-<img src="offline.png" alt="Steam Offline">
+    <img src="offline.png" alt="Steam Offline">
 </a>
 
 <div class="footer">
