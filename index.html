@@ -3,37 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>MOVE | Steam</title>
 
 <style>
 *{
-.banner{ 
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0b1220;
+    background-image:
+    radial-gradient(circle at top,#143b7d33 0%,transparent 40%);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    padding:60px 20px;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    text-align:center;
+}
+
+.logo{
+    font-size:52px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:8px;
+}
+
+.desc{
+    color:#9ca3af;
+    font-size:18px;
+    margin-bottom:45px;
+}
+
 .banner{
     display:block;
     width:100%;
-    height:auto;
     border-radius:22px;
-    margin-bottom:30px;
-    box-shadow:0 0 18px rgba(0,120,255,.18);
-    transition:transform .35s ease, box-shadow .35s ease;
-    cursor:pointer;
+    margin-bottom:35px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(0,132,255,.20);
+    transition:.35s;
+}
+
+.banner img{
+    width:100%;
+    display:block;
 }
 
 .banner:hover{
-    transform:translateY(-8px) scale(1.03);
-    box-shadow:0 0 35px rgba(0,120,255,.55);
-}
-
-.section-title{
-    color:#ffffff;
-    font-size:24px;
-    font-weight:bold;
-    margin:25px 0 15px;
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 0 35px rgba(0,132,255,.55);
 }
 
 .footer{
-    margin-top:40px;
-    color:#8ea2c8;
+    margin-top:30px;
+    color:#7d8aa5;
     font-size:15px;
 }
 
@@ -42,58 +74,20 @@
     font-weight:bold;
 }
 
-body{
-background:#0b1220;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-}
-
-.container{
-width:90%;
-max-width:900px;
-text-align:center;
-}
+@media(max-width:768px){
 
 .logo{
-color:#fff;
-font-size:38px;
-font-weight:bold;
-margin-bottom:10px;
+    font-size:38px;
 }
 
 .desc{
-color:#9ca3af;
-margin-bottom:40px;
-font-size:18px;
+    font-size:16px;
 }
 
-.card{
-display:block;
-text-decoration:none;
-background:#111827;
-color:#fff;
-padding:22px;
-margin:18px 0;
-border-radius:18px;
-border:1px solid #2563eb;
-transition:.25s;
+.banner{
+    margin-bottom:22px;
 }
 
-.card:hover{
-transform:translateY(-4px);
-background:#1e293b;
-}
-
-.card h2{
-font-size:28px;
-margin-bottom:8px;
-}
-
-.card p{
-color:#cbd5e1;
-font-size:15px;
 }
 </style>
 
@@ -109,14 +103,12 @@ font-size:15px;
 اختر نوع حساب Steam
 </div>
 
-
-<a href="https://salla.sa/movestore/steam-online/c25323818" target="_blank">
-    <img src="online.png" class="banner">
+<a class="banner" href="https://salla.sa/movestore/steam-online/c25323818" target="_blank">
+<img src="online.png" alt="Steam Online">
 </a>
 
-
-<a href="https://salla.sa/movestore/steam-offline/c758486836" target="_blank">
-    <img src="offline.png" class="banner">
+<a class="banner" href="https://salla.sa/movestore/steam-offline/c758486836" target="_blank">
+<img src="offline.png" alt="Steam Offline">
 </a>
 
 <div class="footer">
