@@ -109,14 +109,14 @@ to{transform:translateY(-180px)}
 
 /* side characters */
 .side{
-position:fixed;
-top:50%;
-transform:translateY(-50%);
-pointer-events:none;
-z-index:1;
-opacity:.45;
-filter:drop-shadow(0 0 20px rgba(0,150,255,.25))
-drop-shadow(0 0 45px rgba(0,150,255,.18));
+    position:fixed;
+    bottom:0;
+    pointer-events:none;
+    z-index:1;
+    opacity:.55;
+    filter:
+    drop-shadow(0 0 35px #008cff)
+    drop-shadow(0 0 90px rgba(0,140,255,.55));
 }
 .side::after{
 content:"";
@@ -133,15 +133,22 @@ animation:glow 4s ease-in-out infinite;
 50%{opacity:.8;transform:scale(1.05)}
 }
 .left-character{
-    left:-120px;
-    width:780px;
+    position:fixed;
+    left:-260px;
+    bottom:0;
+    width:900px;
+    opacity:.55;
+    z-index:1;
 }
 
 .right-character{
-    right:-120px;
-    width:780px;
+    position:fixed;
+    right:-230px;
+    bottom:0;
+    width:860px;
+    opacity:.55;
+    z-index:1;
 }
-
 .background{
 
 position:fixed;
