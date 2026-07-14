@@ -225,40 +225,38 @@ font-size:15px;
 }
 .footer span{color:#2d8cff;font-weight:bold;}
 
-@media (max-width:768px){
+@media (max-width: 768px){
 
-body{
-    background-attachment: scroll !important;
-}
+    body{
+        display:block;
+        padding:30px 15px;
+        overflow-x:hidden;
 
-.background{
-    display: none;
-}
-    /* إخفاء الشخصيات */
+        background:#081321 !important;
+        background-image:linear-gradient(180deg,#050913,#091321,#0b1220) !important;
+        background-attachment:scroll !important;
+    }
+
+    .background{
+        display:none !important;
+        animation:none !important;
+        background:none !important;
+    }
+
+    .particles{
+        display:none !important;
+    }
+
     .side,
     .left-character,
     .right-character{
         display:none !important;
     }
 
-    /* إخفاء النجوم */
-    .particles{
-        display:none !important;
-    }
-
-    /* تبسيط الخلفية */
-    .background{
-        animation:none;
-    }
-
-    /* إزالة الظلال الثقيلة */
-    .banner{
-        box-shadow:none;
-    }
-
-    .banner:hover{
-        transform:none;
-        box-shadow:none;
+    .container{
+        width:100%;
+        max-width:100%;
+        padding:0;
     }
 
     .logo img{
@@ -268,11 +266,25 @@ body{
     }
 
     .desc{
-        font-size:17px;
+        font-size:18px;
         margin-bottom:25px;
     }
 
+    .banner{
+        width:100%;
+        margin-bottom:20px;
+        border-radius:16px;
+        box-shadow:none !important;
+        transform:none !important;
+    }
+
+    .banner:hover{
+        transform:none;
+        box-shadow:none;
+    }
+
     .footer{
+        margin-top:25px;
         font-size:14px;
     }
 }
