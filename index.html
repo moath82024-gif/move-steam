@@ -10,32 +10,27 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
 
-    background:
-    radial-gradient(circle at top,#0f3b82 0%,transparent 30%),
-    radial-gradient(circle at bottom,#081a35 0%,transparent 35%),
-    linear-gradient(180deg,#050913,#091321,#0b1220);
+background:
+linear-gradient(180deg,#050913,#091321,#0b1220);
 
-    background-size:cover;
-    background-attachment:fixed;
+color:#fff;
 
-    color:#fff;
+display:flex;
+justify-content:center;
 
-    display:flex;
-    justify-content:center;
+padding:60px 20px;
 
-    padding:60px 20px;
+overflow-x:hidden;
 
-    overflow-x:hidden;
-
-    position:relative;
+position:relative;
 
 }
 
@@ -43,139 +38,122 @@ body{
 
 .background{
 
-    position:fixed;
-
-    left:0;
-    top:0;
-
-    width:100%;
-    height:100%;
-
-    pointer-events:none;
-
-    z-index:0;
-
-    background:
-
-    radial-gradient(circle at 20% 30%,
-    rgba(0,140,255,.15),
-    transparent 30%),
-
-    radial-gradient(circle at 80% 30%,
-    rgba(0,140,255,.15),
-    transparent 30%),
-
-    radial-gradient(circle at center,
-    rgba(0,80,255,.08),
-    transparent 55%);
-
-    animation:bgMove 12s ease-in-out infinite;
-
-}
-
-@keyframes bgMove{
-
-0%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.05);
-}
-
-100%{
-transform:scale(1);
-}
-
-}
-/* particles */
-.particles{
 position:fixed;
 inset:0;
-pointer-events:none;
-z-index:0;
-opacity:.35;
-background-image:
-radial-gradient(#1d8cff 1px,transparent 1px),
-radial-gradient(#4db8ff 1px,transparent 1px);
-background-size:180px 180px,260px 260px;
-background-position:0 0,120px 80px;
-animation:particlesMove 18s linear infinite;
-}
-@keyframes particlesMove{
-from{transform:translateY(0)}
-to{transform:translateY(-180px)}
-}
-
-/* side characters */
-.side{
-    position:fixed;
-    bottom:0;
-    pointer-events:none;
-    z-index:1;
-    opacity:.55;
-    filter:
-    drop-shadow(0 0 35px #008cff)
-    drop-shadow(0 0 90px rgba(0,140,255,.55));
-}
-.side::after{
-content:"";
-position:absolute;
-inset:-30px;
-border-radius:50%;
-background:radial-gradient(circle,rgba(0,140,255,.28),transparent 70%);
-filter:blur(40px);
-z-index:-1;
-animation:glow 4s ease-in-out infinite;
-}
-@keyframes glow{
-0%,100%{opacity:.3;transform:scale(.96)}
-50%{opacity:.8;transform:scale(1.05)}
-}
-.left-character{
-    position:fixed;
-    left:-180px;
-    bottom:-60px;
-    height:100vh;
-    width:auto;
-    opacity:.55;
-    z-index:1;
-}
-
-.right-character{
-    position: fixed;
-    right: -20px;   /* قربه من البنر */
-bottom: -450px;
-    height: 135vh;  /* نفس حجم Ghost تقريبًا */
-    width: auto;
-    opacity: .55;
-    z-index: 1;
-}
-.background{
-
-position:fixed;
-
-left:0;
-top:0;
-
-width:100%;
-height:100%;
-
-z-index:0;
 
 pointer-events:none;
+
+z-index:0;
 
 background:
 
-radial-gradient(circle at 20% 35%,rgba(0,140,255,.12),transparent 28%),
+radial-gradient(circle at 20% 30%,rgba(0,140,255,.15),transparent 30%),
 
-radial-gradient(circle at 80% 35%,rgba(0,140,255,.12),transparent 28%),
+radial-gradient(circle at 80% 30%,rgba(0,140,255,.15),transparent 30%),
 
 radial-gradient(circle at center,rgba(0,80,255,.08),transparent 55%);
 
 animation:bgMove 12s ease-in-out infinite;
 
 }
+
+@keyframes bgMove{
+
+0%,100%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.04);
+}
+
+}
+
+/* النجوم */
+
+.particles{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:0;
+
+opacity:.35;
+
+background-image:
+
+radial-gradient(#1d8cff 1px,transparent 1px),
+
+radial-gradient(#4db8ff 1px,transparent 1px);
+
+background-size:180px 180px,260px 260px;
+
+background-position:0 0,120px 80px;
+
+animation:particlesMove 18s linear infinite;
+
+}
+
+@keyframes particlesMove{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-180px);
+}
+
+}
+
+/* الشخصيات */
+
+.side{
+
+position:fixed;
+
+pointer-events:none;
+
+opacity:.55;
+
+z-index:1;
+
+filter:
+
+drop-shadow(0 0 35px #008cff)
+
+drop-shadow(0 0 90px rgba(0,140,255,.55));
+
+}
+
+.left-character{
+
+left:-180px;
+
+bottom:-60px;
+
+height:100vh;
+
+width:auto;
+
+}
+
+.right-character{
+
+right:-20px;
+
+bottom:-450px;
+
+height:135vh;
+
+width:auto;
+
+}
+
+/* المحتوى */
 
 .container{
 
@@ -184,107 +162,250 @@ position:relative;
 z-index:5;
 
 width:100%;
+
 max-width:900px;
 
 text-align:center;
 
 }
+    /* اللوقو */
 
-.logo{margin-bottom:20px;}
+.logo{
+margin-bottom:20px;
+}
+
 .logo img{
-width:120px;height:120px;border-radius:50%;
-display:block;margin:auto;
-box-shadow:0 0 15px rgba(45,140,255,.35),0 0 35px rgba(45,140,255,.2);
+
+width:120px;
+height:120px;
+
+border-radius:50%;
+
+display:block;
+
+margin:auto;
+
+box-shadow:
+
+0 0 18px rgba(45,140,255,.35),
+
+0 0 40px rgba(45,140,255,.18);
+
 transition:.35s;
-}
-.logo img:hover{
-transform:scale(1.08);
-box-shadow:0 0 25px rgba(45,140,255,.6),0 0 50px rgba(45,140,255,.35);
+
 }
 
-.desc{color:#9ca3af;font-size:19px;margin-bottom:45px;}
+.logo img:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+
+0 0 28px rgba(45,140,255,.55),
+
+0 0 60px rgba(45,140,255,.30);
+
+}
+
+/* الوصف */
+
+.desc{
+
+color:#9ca3af;
+
+font-size:19px;
+
+margin-bottom:45px;
+
+}
+
+/* البنرات */
 
 .banner{
-display:block;width:100%;
+
+display:block;
+
+width:100%;
+
 border-radius:22px;
+
 overflow:hidden;
+
 margin-bottom:35px;
+
 box-shadow:0 0 20px rgba(0,132,255,.20);
+
 transition:.35s;
+
 }
-.banner img{width:100%;display:block;}
+
+.banner img{
+
+display:block;
+
+width:100%;
+
+}
+
 .banner:hover{
+
 transform:translateY(-8px) scale(1.02);
+
 box-shadow:0 0 35px rgba(0,132,255,.55);
+
+}
+
+/* الفوتر */
+
+.footer{
+
+margin-top:35px;
+
+color:#7d8aa5;
+
+font-size:15px;
+
+}
+
+.footer span{
+
+color:#2d8cff;
+
+font-weight:bold;
+
+}
+
+/* الجوال */
+
+@media (max-width:768px){
+
+body{
+
+display:block;
+
+padding:30px 15px;
+
+background:#081321;
+
+overflow-x:hidden;
+
+}
+
+.background{
+
+display:none !important;
+
+}
+
+.particles{
+
+display:none !important;
+
+}
+
+.side,
+
+.left-character,
+
+.right-character{
+
+display:none !important;
+
+}
+
+.container{
+
+max-width:100%;
+
+}
+
+.logo img{
+
+width:90px;
+
+height:90px;
+
+box-shadow:none;
+
+}
+
+.desc{
+
+font-size:17px;
+
+margin-bottom:25px;
+
+}
+
+.banner{
+
+border-radius:16px;
+
+margin-bottom:20px;
+
+box-shadow:none;
+
+transform:none !important;
+
+}
+
+.banner:hover{
+
+transform:none;
+
+box-shadow:none;
+
 }
 
 .footer{
-margin-top:35px;
-color:#7d8aa5;
-font-size:15px;
+
+font-size:14px;
+
 }
-.footer span{color:#2d8cff;font-weight:bold;}
 
-@media (max-width: 768px){
-
-    body{
-        display:block;
-        padding:30px 15px;
-        overflow-x:hidden;
-
-        background:#081321 !important;
-        background-image:linear-gradient(180deg,#050913,#091321,#0b1220) !important;
-        background-attachment:scroll !important;
-    }
-
-    .background{
-        display:none !important;
-        animation:none !important;
-        background:none !important;
-    }
-
-    .particles{
-        display:none !important;
-    }
-
-    .side,
-    .left-character,
-    .right-character{
-        display:none !important;
-    }
-
-    .container{
-        width:100%;
-        max-width:100%;
-        padding:0;
-    }
-
-    .logo img{
-        width:90px;
-        height:90px;
-        box-shadow:none;
-    }
-
-    .desc{
-        font-size:18px;
-        margin-bottom:25px;
-    }
-
-    .banner{
-        width:100%;
-        margin-bottom:20px;
-        border-radius:16px;
-        box-shadow:none !important;
-        transform:none !important;
-    }
-
-    .banner:hover{
-        transform:none;
-        box-shadow:none;
-    }
-
-    .footer{
-        margin-top:25px;
-        font-size:14px;
-    }
 }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="particles"></div>
+
+<img src="ghost (2).png" class="side left-character" alt="Ghost">
+
+<img src="leon2.png" class="side right-character" alt="Leon">
+
+<div class="container">
+
+<div class="logo">
+
+<img src="logo.png" alt="MOVE Logo">
+
+</div>
+
+<div class="desc">
+
+اختر نوع حساب Steam
+
+</div>
+<a class="banner" href="https://salla.sa/movestore/steam-online/c25323818" target="_blank">
+    <img src="online.png" alt="Steam Online">
+</a>
+
+<a class="banner" href="https://salla.sa/movestore/steam-offline/c758486836" target="_blank">
+    <img src="offline.png" alt="Steam Offline">
+</a>
+
+<div class="footer">
+    © 2026 <span>MOVE STORE</span><br>
+    أفضل متجر للحسابات والألعاب الرقمية
+</div>
+
+</div>
+
+</body>
+</html>
