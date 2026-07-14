@@ -1,21 +1,93 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>MOVE | Steam</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{
-background:#0b1220;
-background-image:radial-gradient(circle at top,#143b7d33 0%,transparent 40%);
-color:#fff;
-display:flex;
-justify-content:center;
-padding:60px 20px;
-overflow-x:hidden;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
+body{
+
+    background:
+    radial-gradient(circle at top,#0f3b82 0%,transparent 30%),
+    radial-gradient(circle at bottom,#081a35 0%,transparent 35%),
+    linear-gradient(180deg,#050913,#091321,#0b1220);
+
+    background-size:cover;
+    background-attachment:fixed;
+
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+
+    padding:60px 20px;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/* الخلفية */
+
+.background{
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:0;
+
+    background:
+
+    radial-gradient(circle at 20% 30%,
+    rgba(0,140,255,.15),
+    transparent 30%),
+
+    radial-gradient(circle at 80% 30%,
+    rgba(0,140,255,.15),
+    transparent 30%),
+
+    radial-gradient(circle at center,
+    rgba(0,80,255,.08),
+    transparent 55%);
+
+    animation:bgMove 12s ease-in-out infinite;
+
+}
+
+@keyframes bgMove{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
 /* particles */
 .particles{
 position:fixed;
@@ -63,12 +135,43 @@ animation:glow 4s ease-in-out infinite;
 .left-character{left:-40px;width:470px;}
 .right-character{right:-40px;width:470px;}
 
+.background{
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+z-index:0;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(circle at 20% 35%,rgba(0,140,255,.12),transparent 28%),
+
+radial-gradient(circle at 80% 35%,rgba(0,140,255,.12),transparent 28%),
+
+radial-gradient(circle at center,rgba(0,80,255,.08),transparent 55%);
+
+animation:bgMove 12s ease-in-out infinite;
+
+}
+
 .container{
+
 position:relative;
-z-index:10;
+
+z-index:5;
+
 width:100%;
 max-width:900px;
+
 text-align:center;
+
 }
 
 .logo{margin-bottom:20px;}
@@ -117,6 +220,8 @@ body{padding:40px 15px;}
 </style>
 </head>
 <body>
+
+<div class="background"></div>
 
 <div class="particles"></div>
 
