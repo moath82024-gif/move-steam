@@ -7,6 +7,7 @@
 <title>MOVE | Steam</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -16,15 +17,63 @@
 
 body{
     background:#0b1220;
-    background-image:
-    radial-gradient(circle at top,#143b7d33 0%,transparent 40%);
+    background-image:radial-gradient(circle at top,#143b7d33 0%,transparent 40%);
     color:#fff;
     display:flex;
     justify-content:center;
     padding:60px 20px;
+    overflow-x:hidden;
 }
 
+/* الشخصيات */
+
+.side{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    pointer-events:none;
+    z-index:1;
+    opacity:.38;
+
+    filter:
+        drop-shadow(0 0 25px #008cff)
+        drop-shadow(0 0 60px rgba(0,140,255,.35));
+
+    animation:floating 6s ease-in-out infinite;
+    transition:.4s;
+}
+
+.left-character{
+    left:-70px;
+    width:430px;
+}
+
+.right-character{
+    right:-70px;
+    width:430px;
+}
+
+@keyframes floating{
+
+0%{
+transform:translateY(-50%);
+}
+
+50%{
+transform:translateY(calc(-50% - 12px));
+}
+
+100%{
+transform:translateY(-50%);
+}
+
+}
+
+/* المحتوى */
+
 .container{
+    position:relative;
+    z-index:10;
     width:100%;
     max-width:900px;
     text-align:center;
@@ -128,17 +177,30 @@ body{
     font-size:14px;
 }
 
+.side{
+    display:none;
 }
+
+}
+
 </style>
 
 </head>
 
 <body>
 
+<!-- الشخصيات -->
+
+<img src="ghost.png" class="side left-character" alt="Ghost">
+
+<img src="leon.png" class="side right-character" alt="Leon">
+
+<!-- المحتوى -->
+
 <div class="container">
 
 <div class="logo">
-    <img src="logo.png" alt="MOVE Logo">
+<img src="logo.png" alt="MOVE Logo">
 </div>
 
 <div class="desc">
@@ -146,11 +208,11 @@ body{
 </div>
 
 <a class="banner" href="https://salla.sa/movestore/steam-online/c25323818" target="_blank">
-    <img src="online.png" alt="Steam Online">
+<img src="online.png" alt="Steam Online">
 </a>
 
 <a class="banner" href="https://salla.sa/movestore/steam-offline/c758486836" target="_blank">
-    <img src="offline.png" alt="Steam Offline">
+<img src="offline.png" alt="Steam Offline">
 </a>
 
 <div class="footer">
